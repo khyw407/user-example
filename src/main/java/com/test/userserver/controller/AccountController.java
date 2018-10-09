@@ -17,6 +17,12 @@ public class AccountController {
 	@Autowired
 	private AccountService accountService;
 	
+	/*
+	 * Input Type	: String
+	 * Output Type	: ResponseEntity<Account>
+	 * Description	: /account/{accountName}로 들어온 요청을 기반으로 해당 accountName이 존재하는지 검색하고
+	 * 				    그 결과를 리턴한다.
+	 */
 	@RequestMapping("/account/{accountName}")
 	@ResponseBody
 	public ResponseEntity<Account> getAccount(@PathVariable String accountName){
